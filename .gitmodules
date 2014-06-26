@@ -1,0 +1,6 @@
+[submodule "vim-colors-solarized"]
+	path = vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "rust.vim"]
+	path = rust.vim
+	url = https://github.com/wting/rust.vim.git
