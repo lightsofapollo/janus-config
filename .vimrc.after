@@ -7,3 +7,18 @@ let g:solarized_termcolors=256
 set t_Co=16
 set background=dark
 colorscheme solarized
+
+" Turn off terrible bell sounds
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+
+" Ensure text does not go over 80 columns if it does show terrible colors
+set textwidth=80
+set fo-=t
+augroup vimrc_autocmds
+autocmd BufRead * highlight OverLength ctermbg=darkgrey guibg=#592929
+autocmd BufRead * match OverLength /\%80v.*/
+augroup END
+
+" Ensure go is using tabs
+autocmd FileType go set noexpandtab shiftwidth=2 softtabstop=0
