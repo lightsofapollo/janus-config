@@ -1,10 +1,4 @@
-"set background=dark
-"colorscheme solarized
-"color solarized
-"let g:solarized_termcolors=256
-
 let g:solarized_termcolors=256
-set t_Co=16
 set background=dark
 colorscheme solarized
 
@@ -14,11 +8,32 @@ autocmd GUIEnter * set visualbell t_vb=
 
 " Ensure text does not go over 80 columns if it does show terrible colors
 set textwidth=80
-set fo-=t
-augroup vimrc_autocmds
-autocmd BufRead * highlight OverLength ctermbg=darkgrey guibg=#592929
-autocmd BufRead * match OverLength /\%80v.*/
-augroup END
+" Make it more obvious when we go over 80 columns
+set colorcolumn=80
 
 " Ensure go is using tabs
 autocmd FileType go set noexpandtab shiftwidth=2 softtabstop=0
+
+" Download the prepatched powerline font
+set guifont=Inconsolata-dz\ for\ Powerline:h18
+
+" Powerline
+set rtp+=~/workspace/powerline/powerline/bindings/vim
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+
+" Ensure we start in fullscreen mode...
+if has("gui_running")
+  " GUI is running or is about to start.
+  " Maximize gvim window (for an alternative on Windows, see simalt below).
+  set lines=999 columns=999
+else
+  " This is console Vim.
+  if exists("+lines")
+    set lines=50
+  endif
+  if exists("+columns")
+    set columns=100
+  endif
+endif
