@@ -2,6 +2,9 @@ let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 
+" Spell check on
+set spell
+
 " Turn off terrible bell sounds
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=

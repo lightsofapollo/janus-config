@@ -10,3 +10,6 @@
 [submodule "vim-toml"]
 	path = vim-toml
 	url = https://github.com/cespare/vim-toml
+[submodule "dockerfile.vim"]
+	path = dockerfile.vim
+	url = https://github.com/honza/dockerfile.vim.git
