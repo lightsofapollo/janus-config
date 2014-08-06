@@ -13,3 +13,6 @@
 [submodule "dockerfile.vim"]
 	path = dockerfile.vim
 	url = https://github.com/honza/dockerfile.vim.git
+[submodule "vim-jade"]
+	path = vim-jade
+	url = https://github.com/digitaltoad/vim-jade.git
