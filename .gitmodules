@@ -19,3 +19,6 @@
 [submodule "vim-jade"]
 	path = vim-jade
 	url = https://github.com/digitaltoad/vim-jade.git
+[submodule "vim-snippets"]
+	path = vim-snippets
+	url = https://github.com/lightsofapollo/vim-snippets
